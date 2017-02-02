@@ -1,0 +1,3 @@
+<component name="DependencyValidationManager">
+  <scope name="practicalGo" pattern="file[practicalGo]:*/&amp;&amp;!file[practicalGo]:Godeps//*" />
+</component>

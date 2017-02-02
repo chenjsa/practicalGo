@@ -1,6 +1,8 @@
 
 # Created by https://www.gitignore.io/api/id,intellij,go,visualstudiocode,node,webstorm
 
+practicalGo.iml
+
 #!! ERROR: id is undefined. Use list command to see defined gitignore types !!#
 
 ### Intellij ###
