@@ -1,19 +1,19 @@
 package main
 
 import (
-	"io"
+	"github.com/go-martini/martini"
 	"log"
 	"net/http"
 )
 
-func helloHandler(w http.ResponseWriter, req *http.Request) {
-	io.WriteString(w, "Hello, world!")
+func helloHandler() string {
+	return "Hello World!"
 }
 
 func main() {
-	http.HandleFunc("/", helloHandler)
-	err := http.ListenAndServe("localhost:8090", nil)
-	if err != nil {
-		log.Fatal("ListenAndServe: ", err.Error())
-	}
+	m := martini.Classic()
+	m.Get("/", helloHandler)
+	http.Handle("/", m)
+	log.Println("start web server on 8090")
+	log.Fatal(http.ListenAndServe(":8090", nil))
 }
