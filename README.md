@@ -27,7 +27,29 @@ Default Project requires Go, MongoDB and few other tools installed.
 
 # 内容
 
-* `lession1`分支：搭建最简单的HTTP服务器
-* `lession2`分支：使用godep管理Martini依赖包，使用Martini框架搭建HTTP服务器
+* `lesson1`分支：搭建最简单的HTTP服务器
+* `lesson2`分支：使用godep管理Martini依赖包，使用Martini框架搭建HTTP服务器
+* `lesson3`分支：使用React+Redux构建Web页面
+* todo
+    * 使用antd组件库
+    * 使用MongoDB进行数据存储
+    * 上线部署
+
+# 运行
+
+Server编译
+```bash
+godep go build
+```
+Server开发模式运行
+```bash
+./practicalGo -war web
+```
+Web页面
+```bash
+cd web
+npm run dev
+```
+在浏览器地址栏输入http://localhost:8091查看页面
 
 **Let's go!** 
