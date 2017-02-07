@@ -30,8 +30,12 @@ Default Project requires Go, MongoDB and few other tools installed.
 * `lesson1`分支：搭建最简单的HTTP服务器
 * `lesson2`分支：使用godep管理Martini依赖包，使用Martini框架搭建HTTP服务器
 * `lesson3`分支：使用React+Redux构建Web页面
+* `lesson4`分支：使用antd组件库
+    * 使用dva框架，二次封装Redux，更好的异步实现，更集中的代码。
+    * mock、test完美集成。
+    * roadhog替代webpack。
+    * 实现登录页。
 * todo
-    * 使用antd组件库
     * 使用MongoDB进行数据存储
     * 上线部署
 
@@ -48,7 +52,8 @@ Server开发模式运行
 Web页面
 ```bash
 cd web
-npm run dev
+yarn install
+npm start
 ```
 在浏览器地址栏输入http://localhost:8091查看页面
 
