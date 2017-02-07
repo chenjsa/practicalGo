@@ -30,12 +30,16 @@ Default Project requires Go, MongoDB and few other tools installed.
 * `lesson1`分支：搭建最简单的HTTP服务器
 * `lesson2`分支：使用godep管理Martini依赖包，使用Martini框架搭建HTTP服务器
 * `lesson3`分支：使用React+Redux构建Web页面
+    * 使用webpack构建
+    * Redux
 * `lesson4`分支：使用antd组件库
     * 使用dva框架，二次封装Redux，更好的异步实现，更集中的代码。
-    * mock、test完美集成。
+    * 本地mock数据。
     * roadhog替代webpack。
     * 实现登录页。
+    ![login](https://github.com/chenjsa/practicalGo/blob/master/data/login.png)
 * todo
+    * Rest API开发
     * 使用MongoDB进行数据存储
     * 上线部署
 
