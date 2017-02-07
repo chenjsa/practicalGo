@@ -1,0 +1,43 @@
+.hide {
+    display: none;
+    transition: all .3s cubic-bezier(.215,.61,.355,1);
+}
+
+.logo {
+    height: 50px;
+    line-height: 50px;
+    cursor: pointer;
+    background: #2f2f2f;
+    padding-left: 20px;
+    overflow: hidden;
+    &__img {
+        width: 30px;
+        height: 30px;
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 10px;
+    }
+    &__text {
+        font-size: 16px;
+        vertical-align: middle;
+    }
+}
+
+
+
+.collapse{
+    // i {
+    //     transition: all .3s cubic-bezier(.215,.61,.355,1);
+    // }
+    
+    &.active{
+        i {
+            font-size: 16px;
+            vertical-align: middle;
+            display: inline-block;
+        }
+    }
+}
+
+
+
