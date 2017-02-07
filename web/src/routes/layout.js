@@ -36,7 +36,7 @@ const Layout = ({ location, dispatch, layout, children }) => {
       dispatch({
         type: 'layout/fold',
         payload: {
-          folded,
+          fold: folded,
         },
       });
     },

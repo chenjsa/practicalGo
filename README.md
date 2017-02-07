@@ -28,7 +28,9 @@ Default Project requires Go, MongoDB and few other tools installed.
 # 内容
 
 * `lesson1`分支：搭建最简单的HTTP服务器
+    * Hello World!
 * `lesson2`分支：使用godep管理Martini依赖包，使用Martini框架搭建HTTP服务器
+    * Hello World!
 * `lesson3`分支：使用React+Redux构建Web页面
     * 使用webpack构建
     * Redux
