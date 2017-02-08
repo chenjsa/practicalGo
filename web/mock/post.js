@@ -1,8 +1,11 @@
+/**
+ * Created by chenjunsheng on 2017/2/8.
+ */
 'use strict';
 
 export default {
 
-  'GET /api/login': function (req, res) {
+  'POST /api/post': function (req, res) {
 
     console.log(req.query);
 
@@ -30,7 +33,7 @@ export default {
 
   },
 
-  'GET /api/logout': function (req, res) {
+  'GET /api/post': function (req, res) {
 
     console.log(req.query);
 

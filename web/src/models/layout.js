@@ -6,6 +6,7 @@ export default {
   namespace: 'layout',
 
   state: {
+    account: 'admin',
     fold: true,
     logining: false,
     logined: false,
@@ -22,8 +23,12 @@ export default {
         });
       }
       if (localStorage.getItem('logined')) {
+        const account = localStorage.getItem('account');
         dispatch({
           type: 'loginSuccess',
+          payload: {
+            account,
+          },
         });
       }
     },
@@ -44,9 +49,10 @@ export default {
       if (data.success) {
         message.success(data.msg);
         localStorage.setItem('logined', true);
-        localStorage.setItem('token', data.token);
+        localStorage.setItem('token', data.data.token);
+        localStorage.setItem('account', data.data.account);
         yield put({ type: 'hideLogining' });
-        yield put({ type: 'loginSuccess' });
+        yield put({ type: 'loginSuccess', payload: { account: data.data.account } });
       } else {
         message.error(data.msg);
         yield put({ type: 'hideLogining' });
@@ -62,6 +68,7 @@ export default {
       if (data.success) {
         localStorage.removeItem('logined');
         localStorage.removeItem('token');
+        localStorage.removeItem('account');
         message.success('注销成功！');
         yield put({ type: 'logoutSuccess' });
       } else {
@@ -82,8 +89,8 @@ export default {
     hideLogining(state) {
       return { ...state, logining: false };
     },
-    loginSuccess(state) {
-      return { ...state, logined: true };
+    loginSuccess(state, action) {
+      return { ...state, ...action.payload, logined: true };
     },
     logoutSuccess(state) {
       return { ...state, logined: false };

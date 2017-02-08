@@ -12,8 +12,8 @@ import Login from '../components/layout/login';
 
 const Layout = ({ location, dispatch, layout, children }) => {
   const { fold, logined, logining } = layout;
-
   const siderProps = {
+    account: layout.account,
     fold,
   };
 
