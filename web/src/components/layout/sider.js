@@ -10,7 +10,7 @@ const MenuItemGroup = Menu.ItemGroup;
 
 const Sider = ({ account, fold }) => {
   const menuProps = {
-    defaultOpenKeys: ['post'],
+    defaultOpenKeys: ['article'],
     theme: 'dark',
   };
 
@@ -24,7 +24,7 @@ const Sider = ({ account, fold }) => {
       <Menu {...menuProps} mode={fold ? 'vertical' : 'inline'}>
         <Menu.Item key="article"><Link to="/article"><Icon type="mail" />{fold ? '' : 'article'}</Link></Menu.Item>
         <Menu.Item key="post"><Link to="/post"><Icon type="edit" />{fold ? '' : 'post'}</Link></Menu.Item>
-        <Menu.Item key="home"><Link to="/dashbord"><Icon type="dot-chart" />{fold ? '' : '仪表盘'}</Link></Menu.Item>
+        <Menu.Item key="dashbord"><Link to="/dashbord"><Icon type="dot-chart" />{fold ? '' : '仪表盘'}</Link></Menu.Item>
         <SubMenu key="sub" title={<span><Icon type="appstore-o" />{fold ? '' : '多层菜单'}</span>}>
           <Menu.Item key="5">Option 5</Menu.Item>
           <Menu.Item key="6">Option 6</Menu.Item>
